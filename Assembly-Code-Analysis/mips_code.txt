@@ -1,0 +1,12 @@
+addi $t2, $zero, 5
+subi $t1, $zero, 7
+bneq $t2, $zero, label1
+sw $t1, 0($t2)
+label1:
+add $t3, $t1, $t2
+lw $t4, 0($t2)
+beq $t4, $t1, label2
+j label2
+addi $t3, $zero, 0
+label2:
+addi $t2, $zero, 0
